@@ -5,19 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Base.Theme.PlaylistMaker"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <LinearLayout
-        style="@style/ScreenBackgroundAltColor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:background="?attr/colorPrimary"
+        android:orientation="vertical">
 
-        <TextView
-            style="@style/HeaderStyle"
-            android:text="@string/app_name"
-            android:textColor="@color/yp_white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/size_4dp">
+
+            <TextView
+                android:text="@string/app_name"
+                android:textColor="@color/yp_white"
+                style="@style/HeaderStyle" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,23 +35,23 @@
             <Button
                 android:id="@+id/search_btn"
                 style="@style/ButtonStyle"
+                app:icon = "@drawable/search_light_mode"
                 android:layout_weight="1"
-                android:text="@string/search"
-                app:icon="@drawable/search_light_mode" />
+                android:text="@string/search" />
 
             <Button
                 android:id="@+id/library_btn"
                 style="@style/ButtonStyle"
                 android:layout_weight="1"
-                android:text="@string/library"
-                app:icon="@drawable/library_light_mode" />
+                app:icon = "@drawable/library_light_mode"
+                android:text="@string/library" />
 
             <Button
                 android:id="@+id/settings_btn"
                 style="@style/ButtonStyle"
                 android:layout_weight="1"
-                android:text="@string/settings"
-                app:icon="@drawable/settings_light_mode" />
+                app:icon = "@drawable/settings_light_mode"
+                android:text="@string/settings" />
         </LinearLayout>
     </LinearLayout>
 
