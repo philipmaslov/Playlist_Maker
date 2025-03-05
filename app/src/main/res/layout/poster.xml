@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_screen_backgroud"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="Вопрос:"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:text="2/10"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/poster"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:foreground="?attr/selectableItemBackground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="63dp"
+        android:layout_marginTop="33dp"
+        android:gravity="center"
+        android:text="@string/rating_question"
+        android:textColor="@color/white"
+        android:textSize="@dimen/primary_text_size"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:text="@string/no"
+            android:textColor="@color/button_text" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:ellipsize="middle"
+            android:text="@string/yes"
+            android:textColor="@color/button_text" />
+
+    </LinearLayout>
+
+</LinearLayout>
