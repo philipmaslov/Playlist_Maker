@@ -5,7 +5,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Base.Theme.PlaylistMaker"
     tools:context=".SettingsActivity">
 
     <LinearLayout
@@ -13,28 +12,44 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <TextView
-            style="@style/HeaderStyle"
-            android:text="@string/settings" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:padding="@dimen/size_12dp"
+                android:src="@drawable/arrow_back"
+                app:tint="?attr/colorOnPrimary" />
+
+            <TextView
+                style="@style/HeaderStyle"
+                android:padding="@dimen/size_12dp"
+                android:text="@string/settings" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/size_24dp"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
+                android:orientation="horizontal" >
                 <TextView
                     style="@style/MenuItemStyle"
                     android:layout_weight="1"
                     android:text="@string/dark_team" />
 
-                <Switch
+                <androidx.appcompat.widget.SwitchCompat
                     style="@style/Switch"
                     android:layout_width="56dp"
                     android:layout_height="40dp"
@@ -42,6 +57,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/shareAppButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -62,6 +78,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/writeToSupportButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -81,6 +98,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/userPolicyButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -100,33 +118,6 @@
 
             </LinearLayout>
 
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/yp_light_gray" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:foregroundGravity="bottom"
-            android:orientation="horizontal">
-
-            <Button
-                style="@style/TapBarButtonStyle"
-                android:text="@string/search"
-                app:icon="@drawable/search_light_mode" />
-
-            <Button
-                style="@style/TapBarButtonStyle"
-                android:text="@string/library"
-                app:icon="@drawable/library_light_mode" />
-
-            <Button
-                style="@style/ActiveTabBarButtonStyle"
-                android:text="@string/settings"
-                app:icon="@drawable/settings_light_mode" />
         </LinearLayout>
 
     </LinearLayout>
