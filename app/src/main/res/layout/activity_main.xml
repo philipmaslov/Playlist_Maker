@@ -34,7 +34,7 @@
                 android:id="@+id/search_btn"
                 style="@style/ButtonStyle"
                 android:text="@string/search"
-                app:icon="@drawable/search_light_mode" />
+                app:icon="@drawable/search_light_mode_24" />
 
             <Button
                 android:id="@+id/library_btn"
