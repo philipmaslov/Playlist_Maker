@@ -13,9 +13,6 @@
         android:theme="@style/Base.Theme.PlaylistMaker"
         tools:targetApi="31">
         <activity
-            android:name=".PrimeNumberActivity"
-            android:exported="false" />
-        <activity
             android:name=".NothingActivity"
             android:exported="false" />
         <activity
