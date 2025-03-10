@@ -1,9 +1,12 @@
 package com.example.playlistmaker
 
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -17,6 +20,7 @@ class SearchActivity : AppCompatActivity() {
 
     private var searchValue = SEARCH_INPUT_DEF
 
+    @SuppressLint("ServiceCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -34,6 +38,9 @@ class SearchActivity : AppCompatActivity() {
 
         clearButton.setOnClickListener {
             inputEditText.setText("")
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as? InputMethodManager
+            inputMethodManager?.hideSoftInputFromWindow(inputEditText.windowToken, 0)
+            inputEditText.clearFocus()
         }
 
         backButton.setOnClickListener {
@@ -72,8 +79,8 @@ class SearchActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val SEARCH_INPUT = "SEARCH_INPUT"
-        const val SEARCH_INPUT_DEF = ""
+        private const val SEARCH_INPUT = "SEARCH_INPUT"
+        private const val SEARCH_INPUT_DEF = ""
     }
 }
 

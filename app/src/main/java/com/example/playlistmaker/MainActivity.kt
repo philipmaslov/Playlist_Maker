@@ -21,15 +21,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         searchBtn.setOnClickListener {
-//            val searchIntent = Intent(this, SearchActivity::class.java)
             val searchIntent = Intent(this, SearchActivity::class.java)
             startActivity(searchIntent)
         }
-//
-//        libraryBtn.setOnClickListener {
-////            val libraryIntent = Intent(this, LibraryActivity::class.java)
-//            val libraryIntent = Intent(this, NothingActivity::class.java)
-//            startActivity(libraryIntent)
-//        }
     }
 }

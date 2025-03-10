@@ -1,12 +1,10 @@
 <resources>
     <string name="title_hello">Привет, Практикум!</string>
-    <string name="app_name">Playlist maker</string>
     <string name="settings">Настройки</string>
     <string name="library">Медиатека</string>
     <string name="search">Поиск</string>
     <string name="dark_team">Тёмная тема</string>
     <string name="sharing_app">Поделиться приложением</string>
-    <string name="support">Написать в поддержку</string>
     <string name="user_policy">Пользовательское соглашение</string>
     <string name="monthly_worker">Работник месяца</string>
     <string name="rating_question">Рейтинг этого фильма больше, чем 9?</string>
@@ -15,12 +13,18 @@
     <string name="nothing_notification">Тут пока ничего нет, но скоро обязательно что-то появится...</string>
     <string name="details">Подробнее</string>
     <string name="not_interested">Не интересно</string>
-    <string name="message">Первоклассным Android разработчиком можно стать всего за один вечер! Для этого нужно лишь...</string>
+    <string name="email_body">Первоклассным Android разработчиком можно стать всего за один вечер! Для этого нужно лишь...</string>
+
+    <string name="app_name">Playlist maker</string>
     <string name="app_link">https://practicum.yandex.ru/android-developer/?from=catalog</string>
+
+    <string name="support">Написать в поддержку</string>
     <string name="support_subject">Сообщение разработчикам и разработчицам приложения Playlist Maker</string>
     <string name="support_message">Спасибо разработчикам и разработчицам за крутое приложение!</string>
-    <string name="my_email">"philip.maslov@gmai.com"</string>
+    <string name="support_prompt">Отправить запрос в поддержку</string>
+
+    <string name="show_web_page">Просмотр web-страницы</string>
+    <string name="my_email">"philip.maslov@gmail.com"</string>
     <string name="yandex_offer">https://yandex.ru/legal/practicum_offer/</string>
     <string name="input_hint">Введите число</string>
-    <string name="Search">Поиск</string>
 </resources>

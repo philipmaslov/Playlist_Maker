@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import dalvik.system.ApplicationRuntime
+import androidx.core.net.toUri
 
 class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,17 +54,18 @@ class SettingsActivity : AppCompatActivity() {
 
         sendToSuppot.setOnClickListener {
             val supportRequest = Intent(Intent.ACTION_SENDTO).apply {
-                data = Uri.parse("mailto:")
-                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_subject))
-                putExtra(Intent.EXTRA_TEXT, getString(R.string.support_message))
-                putExtra(Intent.EXTRA_EMAIL, getString(R.string.my_email))
+                data = ("mailto:${getString(R.string.my_email)}" +
+                        "?subject=${getString(R.string.support_subject)}" +
+                        "&body=${getString(R.string.support_message)}").toUri()
+//                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_subject))
+//                putExtra(Intent.EXTRA_TEXT, getString(R.string.support_message))
+//                putExtra(Intent.EXTRA_EMAIL, getString(R.string.my_email))
             }
 
             try {
                 startActivity(
                     Intent.createChooser(
-                        supportRequest,
-                        "Отправка запроса в службу сопровождения"
+                        supportRequest, getString(R.string.support_prompt)
                     )
                 )
             } catch (e: Exception) {
@@ -76,7 +78,7 @@ class SettingsActivity : AppCompatActivity() {
                 setData(Uri.parse(getString(R.string.yandex_offer)))
             }
             try {
-                startActivity(Intent.createChooser(userPolicy, "Просмотр web-страницы"))
+                startActivity(Intent.createChooser(userPolicy, getString(R.string.show_web_page)))
             } catch (e: Exception) {
                 // TODO: Добавить какой-нибудь вывод об ошибке
             }
