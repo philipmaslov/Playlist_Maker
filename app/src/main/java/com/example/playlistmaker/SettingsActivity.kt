@@ -57,9 +57,6 @@ class SettingsActivity : AppCompatActivity() {
                 data = ("mailto:${getString(R.string.my_email)}" +
                         "?subject=${getString(R.string.support_subject)}" +
                         "&body=${getString(R.string.support_message)}").toUri()
-//                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_subject))
-//                putExtra(Intent.EXTRA_TEXT, getString(R.string.support_message))
-//                putExtra(Intent.EXTRA_EMAIL, getString(R.string.my_email))
             }
 
             try {
