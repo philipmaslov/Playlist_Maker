@@ -54,9 +54,10 @@ class SettingsActivity : AppCompatActivity() {
 
         sendToSuppot.setOnClickListener {
             val supportRequest = Intent(Intent.ACTION_SENDTO).apply {
-                data = ("mailto:${getString(R.string.my_email)}" +
-                        "?subject=${getString(R.string.support_subject)}" +
-                        "&body=${getString(R.string.support_message)}").toUri()
+                data = "mailto:".toUri()
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(getString(R.string.my_email)))
+                putExtra(Intent.EXTRA_SUBJECT, getString(R.string.support_subject))
+                putExtra(Intent.EXTRA_TEXT, getString(R.string.support_message))
             }
 
             try {

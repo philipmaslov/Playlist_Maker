@@ -70,7 +70,7 @@
                 android:paddingHorizontal="@dimen/size_12dp"
                 android:paddingVertical="@dimen/size_10dp"
                 android:src="@drawable/clear_light_mode"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:tint="?attr/colorOnSecondary" />
 
         </FrameLayout>
