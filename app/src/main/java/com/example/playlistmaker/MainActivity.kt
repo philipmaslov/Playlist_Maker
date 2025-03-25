@@ -24,5 +24,10 @@ class MainActivity : AppCompatActivity() {
             val searchIntent = Intent(this, SearchActivity::class.java)
             startActivity(searchIntent)
         }
+
+        libraryBtn.setOnClickListener {
+            val libraryIntent = Intent(this, GlideTesting::class.java)
+            startActivity(libraryIntent)
+        }
     }
 }
