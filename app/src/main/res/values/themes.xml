@@ -23,6 +23,12 @@
         <item name="android:statusBarColor">@color/yp_blue</item>
         <item name="android:navigationBarColor">@color/yp_blue</item>
         <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Base.Theme.PlaylistMaker.Search.Screen" parent="Base.Theme.PlaylistMaker">
+        <item name="colorPrimary">@color/yp_black</item>
+        <item name="colorSecondary">@color/yp_gray</item>
+        <item name="backgroundColor">@color/yp_white</item>
 
     </style>
 </resources>
