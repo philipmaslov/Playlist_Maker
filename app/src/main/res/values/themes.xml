@@ -29,5 +29,6 @@
         <item name="colorPrimary">@color/yp_black</item>
         <item name="colorSecondary">@color/yp_gray</item>
         <item name="backgroundColor">@color/yp_white</item>
+
     </style>
 </resources>

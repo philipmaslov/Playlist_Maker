@@ -15,9 +15,6 @@
         android:theme="@style/Base.Theme.PlaylistMaker"
         tools:targetApi="31">
         <activity
-            android:name=".GlideTesting"
-            android:exported="false" />
-        <activity
             android:name=".NothingActivity"
             android:exported="false" />
         <activity
